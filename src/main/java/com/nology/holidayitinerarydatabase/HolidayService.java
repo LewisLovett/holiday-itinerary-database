@@ -26,7 +26,7 @@ public class HolidayService {
         return holiday.get();
     }
 
-    public List<Holiday> getAllHolidays(int limit){
+    public List<Holiday> getHolidays(int limit){
         return holidayRepository.findAll().stream().limit(limit).collect((Collectors.toList()));
     }
 
