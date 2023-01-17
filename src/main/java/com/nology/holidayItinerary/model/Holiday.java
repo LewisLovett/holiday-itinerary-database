@@ -1,22 +1,29 @@
-package com.nology.holidayitinerarydatabase;
+package com.nology.holidayItinerary.model;
+
+
 
 import javax.persistence.*;
 
 
 @Entity
+@Table(name="Holiday")
 public class Holiday {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "holiday_generator")
     private int id;
+    @Column(name = "location")
     private String location;
+    @Column(name = "date")
     private String date;
+    @Column(name = "author")
     private String author;
+    @Column(name = "description")
     private String description;
 
     public Holiday(){
 
     }
-    public Holiday(int id, String location, String date, String author, String description) {
-        this.id = id;
+    public Holiday( String location, String date, String author, String description) {
         this.location = location;
         this.date = date;
         this.author = author;

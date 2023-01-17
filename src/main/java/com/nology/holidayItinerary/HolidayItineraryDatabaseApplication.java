@@ -1,8 +1,7 @@
-package com.nology.holidayitinerarydatabase;
+package com.nology.holidayItinerary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
 public class HolidayItineraryDatabaseApplication {

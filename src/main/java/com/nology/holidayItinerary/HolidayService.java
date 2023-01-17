@@ -1,5 +1,7 @@
-package com.nology.holidayitinerarydatabase;
+package com.nology.holidayItinerary;
 
+import com.nology.holidayItinerary.model.Holiday;
+import com.nology.holidayItinerary.repository.HolidayRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,6 +31,8 @@ public class HolidayService {
     public List<Holiday> getHolidays(int limit){
         return holidayRepository.findAll().stream().limit(limit).collect((Collectors.toList()));
     }
-
+//    public List<Image> getImages(int limit){
+//        return holidayRepository.findAll().stream().limit(limit).collect((Collectors.toList()));
+//    }
 
 }
