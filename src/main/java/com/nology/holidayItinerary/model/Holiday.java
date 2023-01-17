@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Holiday {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "holiday_generator")
-    private int id;
+    private long id;
     @Column(name = "location")
     private String location;
     @Column(name = "date")
@@ -30,11 +30,11 @@ public class Holiday {
         this.description = description;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

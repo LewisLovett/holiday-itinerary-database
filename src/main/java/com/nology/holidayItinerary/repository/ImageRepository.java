@@ -7,7 +7,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 public interface ImageRepository extends JpaRepository<Image, Long> {
-    List<Image> findByImageId(Long id);
+    List<Image> findByHolidayId(Long id);
 
     @Transactional
     void deleteByHolidayId(long imageId);

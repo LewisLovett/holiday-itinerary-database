@@ -17,12 +17,12 @@ public class Image {
     @Column(name = "url")
     private String url;
 
+
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "holiday_id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private Holiday holiday;
-
 
 
 
@@ -42,12 +42,12 @@ public class Image {
         this.url = url;
     }
 
-    public int getHolidayId() {
-        return holidayId;
+    public Holiday getHoliday() {
+        return holiday;
     }
 
-    public void setHolidayId(int holidayId) {
-        this.holidayId = holidayId;
+    public void setHoliday(Holiday holiday) {
+        this.holiday = holiday;
     }
 
 
